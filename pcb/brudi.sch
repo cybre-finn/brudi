@@ -1,0 +1,401 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x19 J1
+U 1 1 60DAF557
+P 3600 3000
+F 0 "J1" H 3518 1875 50  0000 C CNN
+F 1 "Conn_01x19" H 3518 1966 50  0000 C CNN
+F 2 "brudi_lib:solder_conn" H 3600 3000 50  0001 C CNN
+F 3 "~" H 3600 3000 50  0001 C CNN
+	1    3600 3000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L RF_Module:ESP32-WROOM-32 U1
+U 1 1 60DB5440
+P 6150 2800
+F 0 "U1" H 5600 4250 50  0000 C CNN
+F 1 "ESP32-WROOM-32" H 5750 4150 50  0000 C CNN
+F 2 "RF_Module:ESP32-WROOM-32" H 6150 1300 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 5850 2850 50  0001 C CNN
+	1    6150 2800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+9V #PWR0102
+U 1 1 60DBDEEF
+P 3850 1950
+F 0 "#PWR0102" H 3850 1800 50  0001 C CNN
+F 1 "+9V" H 3865 2123 50  0000 C CNN
+F 2 "" H 3850 1950 50  0001 C CNN
+F 3 "" H 3850 1950 50  0001 C CNN
+	1    3850 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2100 3850 2100
+Wire Wire Line
+	3850 2100 3850 1950
+$Comp
+L power:+3V3 #PWR0104
+U 1 1 60DC9E4C
+P 6150 1400
+F 0 "#PWR0104" H 6150 1250 50  0001 C CNN
+F 1 "+3V3" H 6165 1573 50  0000 C CNN
+F 2 "" H 6150 1400 50  0001 C CNN
+F 3 "" H 6150 1400 50  0001 C CNN
+	1    6150 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:AMS1117-3.3 U2
+U 1 1 60DDC9A7
+P 9450 1350
+F 0 "U2" H 9450 1592 50  0000 C CNN
+F 1 "AMS1117-3.3" H 9450 1501 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 9450 1550 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 9550 1100 50  0001 C CNN
+	1    9450 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 60DE50C5
+P 9450 1750
+F 0 "#PWR0105" H 9450 1500 50  0001 C CNN
+F 1 "GND" V 9455 1622 50  0000 R CNN
+F 2 "" H 9450 1750 50  0001 C CNN
+F 3 "" H 9450 1750 50  0001 C CNN
+	1    9450 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 60DE74BC
+P 8850 1500
+F 0 "C2" H 8965 1546 50  0000 L CNN
+F 1 "100nF" H 8965 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8888 1350 50  0001 C CNN
+F 3 "~" H 8850 1500 50  0001 C CNN
+	1    8850 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 60DE7CF8
+P 8450 1500
+F 0 "C1" H 8568 1546 50  0000 L CNN
+F 1 "10uF" H 8568 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8488 1350 50  0001 C CNN
+F 3 "~" H 8450 1500 50  0001 C CNN
+	1    8450 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 60DEE74D
+P 9950 1500
+F 0 "C3" H 10065 1546 50  0000 L CNN
+F 1 "100nF" H 10065 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9988 1350 50  0001 C CNN
+F 3 "~" H 9950 1500 50  0001 C CNN
+	1    9950 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C4
+U 1 1 60DEE753
+P 10400 1500
+F 0 "C4" H 10518 1546 50  0000 L CNN
+F 1 "10uF" H 10518 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 10438 1350 50  0001 C CNN
+F 3 "~" H 10400 1500 50  0001 C CNN
+	1    10400 1500
+	1    0    0    -1  
+$EndComp
+Connection ~ 9450 1650
+Wire Wire Line
+	8450 1350 8650 1350
+Wire Wire Line
+	8450 1650 8850 1650
+Connection ~ 8850 1350
+Connection ~ 8850 1650
+Wire Wire Line
+	8850 1650 9450 1650
+Wire Wire Line
+	8850 1350 9150 1350
+Connection ~ 9950 1350
+Wire Wire Line
+	9950 1350 10200 1350
+Connection ~ 9950 1650
+Wire Wire Line
+	9950 1650 10400 1650
+Wire Wire Line
+	9750 1350 9950 1350
+Wire Wire Line
+	9450 1650 9950 1650
+Wire Wire Line
+	9450 1650 9450 1750
+$Comp
+L power:+3V3 #PWR0106
+U 1 1 60E16A4E
+P 7150 1600
+F 0 "#PWR0106" H 7150 1450 50  0001 C CNN
+F 1 "+3V3" H 7165 1773 50  0000 C CNN
+F 2 "" H 7150 1600 50  0001 C CNN
+F 3 "" H 7150 1600 50  0001 C CNN
+	1    7150 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 1600 6750 1600
+$Comp
+L power:+3V3 #PWR0107
+U 1 1 60E1F11E
+P 10200 1350
+F 0 "#PWR0107" H 10200 1200 50  0001 C CNN
+F 1 "+3V3" H 10215 1523 50  0000 C CNN
+F 2 "" H 10200 1350 50  0001 C CNN
+F 3 "" H 10200 1350 50  0001 C CNN
+	1    10200 1350
+	1    0    0    -1  
+$EndComp
+Connection ~ 10200 1350
+Wire Wire Line
+	10200 1350 10400 1350
+$Comp
+L power:+9V #PWR0108
+U 1 1 60E239D2
+P 8650 1350
+F 0 "#PWR0108" H 8650 1200 50  0001 C CNN
+F 1 "+9V" H 8665 1523 50  0000 C CNN
+F 2 "" H 8650 1350 50  0001 C CNN
+F 3 "" H 8650 1350 50  0001 C CNN
+	1    8650 1350
+	1    0    0    -1  
+$EndComp
+Connection ~ 8650 1350
+Wire Wire Line
+	8650 1350 8850 1350
+$Comp
+L Connector:TestPoint TP4
+U 1 1 60E2E87E
+P 5400 1600
+F 0 "TP4" V 5595 1672 50  0000 C CNN
+F 1 "TestPoint" V 5504 1672 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 5600 1600 50  0001 C CNN
+F 3 "~" H 5600 1600 50  0001 C CNN
+	1    5400 1600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5550 1600 5400 1600
+$Comp
+L Connector:TestPoint TP3
+U 1 1 60E3F42D
+P 5050 1700
+F 0 "TP3" V 5245 1772 50  0000 C CNN
+F 1 "TestPoint" V 5154 1772 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 5250 1700 50  0001 C CNN
+F 3 "~" H 5250 1700 50  0001 C CNN
+	1    5050 1700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5550 1700 5050 1700
+$Comp
+L Connector:TestPoint TP2
+U 1 1 60E40AFC
+P 4700 1800
+F 0 "TP2" V 4895 1872 50  0000 C CNN
+F 1 "TestPoint" V 4804 1872 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 4900 1800 50  0001 C CNN
+F 3 "~" H 4900 1800 50  0001 C CNN
+	1    4700 1800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP1
+U 1 1 60E44447
+P 4350 1900
+F 0 "TP1" V 4545 1972 50  0000 C CNN
+F 1 "TestPoint" V 4454 1972 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_1.5x1.5mm" H 4550 1900 50  0001 C CNN
+F 3 "~" H 4550 1900 50  0001 C CNN
+	1    4350 1900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5550 1900 4350 1900
+Wire Wire Line
+	4900 3900 4900 2300
+Wire Wire Line
+	4900 2300 3800 2300
+Wire Wire Line
+	4900 3900 5550 3900
+Wire Wire Line
+	5550 3600 4950 3600
+Wire Wire Line
+	4950 3600 4950 2400
+Wire Wire Line
+	4950 2400 3800 2400
+Wire Wire Line
+	5550 3700 4800 3700
+Wire Wire Line
+	4800 3700 4800 2500
+Wire Wire Line
+	4800 2500 3800 2500
+Wire Wire Line
+	5550 3300 4750 3300
+Wire Wire Line
+	4750 3300 4750 2600
+Wire Wire Line
+	4750 2600 3800 2600
+Wire Wire Line
+	5550 3400 4700 3400
+Wire Wire Line
+	4700 3400 4700 2700
+Wire Wire Line
+	4700 2700 3800 2700
+Wire Wire Line
+	5550 3500 4650 3500
+Wire Wire Line
+	4650 3500 4650 2800
+Wire Wire Line
+	4650 2800 3800 2800
+Wire Wire Line
+	5550 2400 5000 2400
+Wire Wire Line
+	5000 2400 5000 2900
+Wire Wire Line
+	5000 2900 3800 2900
+Wire Wire Line
+	5550 2200 5050 2200
+Wire Wire Line
+	5050 2200 5050 3000
+Wire Wire Line
+	5050 3000 3800 3000
+Wire Wire Line
+	5550 2300 5100 2300
+Wire Wire Line
+	5100 2300 5100 3100
+Wire Wire Line
+	5100 3100 3800 3100
+Wire Wire Line
+	5550 2500 5150 2500
+Wire Wire Line
+	5150 2500 5150 3200
+Wire Wire Line
+	5150 3200 3800 3200
+Wire Wire Line
+	5550 2000 4600 2000
+Wire Wire Line
+	4600 2000 4600 3300
+Wire Wire Line
+	4600 3300 3800 3300
+Wire Wire Line
+	5550 2600 5200 2600
+Wire Wire Line
+	5200 2600 5200 3350
+Wire Wire Line
+	5200 3350 3950 3350
+Wire Wire Line
+	3950 3350 3950 3400
+Wire Wire Line
+	3950 3400 3800 3400
+Wire Wire Line
+	5550 2700 5250 2700
+Wire Wire Line
+	5250 2700 5250 3450
+Wire Wire Line
+	5250 3450 3950 3450
+Wire Wire Line
+	3950 3450 3950 3500
+Wire Wire Line
+	3950 3500 3800 3500
+Wire Wire Line
+	5550 2100 4550 2100
+Wire Wire Line
+	4550 2100 4550 3600
+Wire Wire Line
+	4550 3600 3800 3600
+Wire Wire Line
+	5550 2800 5300 2800
+Wire Wire Line
+	5300 2800 5300 3650
+Wire Wire Line
+	5300 3650 3950 3650
+Wire Wire Line
+	3950 3650 3950 3700
+Wire Wire Line
+	3950 3700 3800 3700
+Wire Wire Line
+	5550 2900 5350 2900
+Wire Wire Line
+	5350 2900 5350 3750
+Wire Wire Line
+	5350 3750 3950 3750
+Wire Wire Line
+	3950 3750 3950 3800
+Wire Wire Line
+	3950 3800 3800 3800
+Wire Wire Line
+	5550 3000 5400 3000
+Wire Wire Line
+	5400 3000 5400 3850
+Wire Wire Line
+	5400 3850 3950 3850
+Wire Wire Line
+	3950 3850 3950 3900
+Wire Wire Line
+	3950 3900 3800 3900
+$Comp
+L power:GND #PWR0101
+U 1 1 60E847AE
+P 3900 2200
+F 0 "#PWR0101" H 3900 1950 50  0001 C CNN
+F 1 "GND" V 3905 2072 50  0000 R CNN
+F 2 "" H 3900 2200 50  0001 C CNN
+F 3 "" H 3900 2200 50  0001 C CNN
+	1    3900 2200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3900 2200 3800 2200
+$Comp
+L power:GND #PWR0103
+U 1 1 60DC7247
+P 6150 4200
+F 0 "#PWR0103" H 6150 3950 50  0001 C CNN
+F 1 "GND" V 6155 4072 50  0000 R CNN
+F 2 "" H 6150 4200 50  0001 C CNN
+F 3 "" H 6150 4200 50  0001 C CNN
+	1    6150 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60EA48B9
+P 4700 1800
+F 0 "#PWR?" H 4700 1550 50  0001 C CNN
+F 1 "GND" V 4705 1672 50  0000 R CNN
+F 2 "" H 4700 1800 50  0001 C CNN
+F 3 "" H 4700 1800 50  0001 C CNN
+	1    4700 1800
+	0    -1   -1   0   
+$EndComp
+$EndSCHEMATC
